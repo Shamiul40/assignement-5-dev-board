@@ -1,6 +1,7 @@
 const completeButton = document.querySelectorAll(".complete-btn");
 
-for(let button of completeButton) {
+for(let i=0; i<completeButton.length; i++) {
+  const button = completeButton[i];
   
   button.addEventListener("click", ()=>{
     alert("board update successfully");
@@ -27,23 +28,25 @@ for(let button of completeButton) {
     const notificationContainer = document.getElementById("notification");
     const notificationBase = "you have comolecated the task";
     const taskTitle = button.closest('.task-card').querySelector('h1').textContent;
-    console.log(taskTitle);
+
+    if(i === completeButton.length-1) {
+      setTimeout(()=>{
+        alert("Congrats! you have completed all the current task");
+      }, 200)
+    }
 
     const currentTime = new Date().toLocaleTimeString();
     let  getNotification = document.createElement("p");
-    getNotification.style.cssText = "background-color: #fff; color: black; font-size: 20px; padding: 10px ; border-radius: 30px";
+    getNotification.style.cssText = "background-color: #fff; color: black; font-size: 14px; padding: 10px ; border-radius: 30px";
     
     getNotification.textContent = `${notificationBase} ${taskTitle} at ${currentTime}`;
     
 
     notificationContainer.appendChild(getNotification)
-    console.log(notificationContainer);
-
-
 
     const clearHistory = document.getElementById("clear-history");
     clearHistory.addEventListener("click", ()=>{
-      getNotification.innerText = "";
+      getNotification.remove("p");
     })
     
   })
