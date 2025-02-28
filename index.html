@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Board</title>
+  <!-- tailwind and daisyUI cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- popins font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    .popins{
+      font-family: "Poppins", sans-serif
+    }
+  </style>
+
+</head>
+<body class="popins">
+<header>
+  <nav class="w-11/12 h-24 rounded-lg flex justify-between items-center mx-auto bg-[#fff] ">
+      <div class="logo flex gap-2 justify-center items-center">
+          <img src="./assets/logo.png" alt="">
+          <h1 class="text-2xl">Dev<span class="font-bold text-[#3752FD]">Board</span></h1>
+      </div>
+      <div class="nav-right flex items-center justify-center gap-8" >
+        <div class="nav-right-child flex justify-center items-center gap-3 bg-gray-100 rounded-3xl px-5 py-3">
+            <img  src="./assets/checkbox.png" alt="">
+            <span>23</span>
+        </div>
+        <img class="bg-gray-100 rounded-full p-2" src="./assets/theme-btn.png" alt="">
+      </div>
+  </nav>
+</header>
+
+<main class="w-11/12 mx-auto flex justify-center items-center gap-2">
+<!-- left section -->
+  <section class="w-8/12">
+    <!-- top section -->
+    <div class="flex justify-center items-center gap-4">
+      <!-- task assingned -->
+        <div class="bg-[#F4F7FF] rounded-lg w-1/4 px-6 py-8 flex justify-center items-center gap-4 ">
+            <img class="bg-white p-1 rounded-full" src="./assets/checkbox.png" alt="">
+            <div>
+              <h4 class="text-sm ">Task Assigned</h4>
+              <h1 class=" text-xl font-bold">05</h1>
+            </div>
+        </div>
+        <!-- Discover somthing -->
+        <div class=" bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-lg w-2/4 px-4 py-4 flex justify-center items-center gap-6 ">
+            <img src="./assets/board.png" alt="">
+            <h3 class="text-white text-lg">Discover Something <br> New Today!</h3>
+        </div>
+        <!-- date  -->
+        <div class="bg-[#F4F7FF] rounded-lg w-1/4 px-6 py-8 flex justify-center items-center gap-4" >
+            <img class="bg-white p-1 rounded-full" src="./assets/calender.png" alt="">
+            <div>
+              <h3>Wed,</h3>
+              <h3 class="font-bold">Jul 28 2025</h3>
+            </div>
+        </div>
+    </div>
+<!--body main div  -->
+    <div class="mt-10  grid grid-cols-3 gap-4">
+      <!-- child div -->
+        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
+          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
+          <hr class="my-4 border-dashed">
+            <div class="flex justify-center items-center gap-8  ">
+                <div>
+                  <h6>Deadline</h6>
+                  <h1 class="font-bold text-sm">21 March 2025</h1>
+                </div>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+            </div>
+        </div>
+
+
+        <!-- child div -->
+        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
+          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
+          <hr class="my-4 border-dashed">
+            <div class="flex justify-center items-center gap-8  ">
+                <div>
+                  <h6>Deadline</h6>
+                  <h1 class="font-bold text-sm">21 March 2025</h1>
+                </div>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+            </div>
+        </div>
+
+
+        <!-- child div -->
+        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
+          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
+          <hr class="my-4 border-dashed">
+            <div class="flex justify-center items-center gap-8  ">
+                <div>
+                  <h6>Deadline</h6>
+                  <h1 class="font-bold text-sm">21 March 2025</h1>
+                </div>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+            </div>
+        </div>
+
+
+        <!-- child div -->
+        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
+          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
+          <hr class="my-4 border-dashed">
+            <div class="flex justify-center items-center gap-8  ">
+                <div>
+                  <h6>Deadline</h6>
+                  <h1 class="font-bold text-sm">21 March 2025</h1>
+                </div>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+            </div>
+        </div>
+
+
+        <!-- child div -->
+        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
+          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
+          <hr class="my-4 border-dashed">
+            <div class="flex justify-center items-center gap-8  ">
+                <div>
+                  <h6>Deadline</h6>
+                  <h1 class="font-bold text-sm">21 March 2025</h1>
+                </div>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+            </div>
+        </div>
+
+
+        <!-- child div -->
+        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
+          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
+          <hr class="my-4 border-dashed">
+            <div class="flex justify-center items-center gap-8  ">
+                <div>
+                  <h6>Deadline</h6>
+                  <h1 class="font-bold text-sm">21 March 2025</h1>
+                </div>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+            </div>
+        </div>
+
+    </div>
+  </section>
+<!-- right section -->
+  <section class="w-2/12">
+      <div class="">
+        <div class="flex justify-center items-center">
+          <img src="./assets/activity.png" alt="">
+          <h1>Activity Log</h1>
+        </div>
+        <button class="bg-[#F4F7FF] py-2 px-64">Clear History</button>
+        <hr class="my-6 border-dashed">
+      </div>
+  </section>
+</main>
+<footer>
+
+</footer>
+
+<script src="./javaScript/script.js"></script>
+</body>
+</html>
