@@ -21,7 +21,7 @@
 </head>
 <body class="popins">
 <header>
-  <nav class="w-11/12 h-24 rounded-lg flex justify-between items-center mx-auto bg-[#fff] ">
+  <nav class="w-11/12 h-24 rounded-lg flex justify-between items-center mx-auto my-2 px-2 bg-[#F4F7FF] ">
       <div class="logo flex gap-2 justify-center items-center">
           <img src="./assets/logo.png" alt="">
           <h1 class="text-2xl">Dev<span class="font-bold text-[#3752FD]">Board</span></h1>
@@ -29,16 +29,16 @@
       <div class="nav-right flex items-center justify-center gap-8" >
         <div class="nav-right-child flex justify-center items-center gap-3 bg-gray-100 rounded-3xl px-5 py-3">
             <img  src="./assets/checkbox.png" alt="">
-            <span>23</span>
+            <span id="nav-value" class="font-bold">23</span>
         </div>
         <img class="bg-gray-100 rounded-full p-2" src="./assets/theme-btn.png" alt="">
       </div>
   </nav>
 </header>
 
-<main class="w-11/12 mx-auto flex justify-center items-center gap-2">
+<main class="w-11/12 mx-auto my-4 flex justify-between gap-6">
 <!-- left section -->
-  <section class="w-8/12">
+  <section class="w-3/4">
     <!-- top section -->
     <div class="flex justify-center items-center gap-4">
       <!-- task assingned -->
@@ -46,7 +46,7 @@
             <img class="bg-white p-1 rounded-full" src="./assets/checkbox.png" alt="">
             <div>
               <h4 class="text-sm ">Task Assigned</h4>
-              <h1 class=" text-xl font-bold">05</h1>
+              <h1 class=" text-xl font-bold"  id="task-assign-value">6</h1>
             </div>
         </div>
         <!-- Discover somthing -->
@@ -58,17 +58,18 @@
         <div class="bg-[#F4F7FF] rounded-lg w-1/4 px-6 py-8 flex justify-center items-center gap-4" >
             <img class="bg-white p-1 rounded-full" src="./assets/calender.png" alt="">
             <div>
-              <h3>Wed,</h3>
-              <h3 class="font-bold">Jul 28 2025</h3>
+              <h3 id="today"></h3>
+              <h3 class="font-bold" id="date-mon-year"></h3>
             </div>
         </div>
     </div>
 <!--body main div  -->
     <div class="mt-10  grid grid-cols-3 gap-4">
+
       <!-- child div -->
-        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
+        <div class="bg-[#F4F7FF] rounded-lg p-2 task-card ">
           <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
-          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+          <h1 class="text-xl  text-bold mb-2 ">Fix Mobile Button Issue</h1>
           <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
           <hr class="my-4 border-dashed">
             <div class="flex justify-center items-center gap-8  ">
@@ -76,15 +77,15 @@
                   <h6>Deadline</h6>
                   <h1 class="font-bold text-sm">21 March 2025</h1>
                 </div>
-                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]  complete-btn">Completed</button>
             </div>
         </div>
 
 
         <!-- child div -->
-        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
-          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
-          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+        <div class="bg-[#F4F7FF] rounded-lg p-2 task-card">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">CloudSync</h3>
+          <h1 class="text-xl  text-bold mb-2  ">Add Dark Mode</h1>
           <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
           <hr class="my-4 border-dashed">
             <div class="flex justify-center items-center gap-8  ">
@@ -92,15 +93,15 @@
                   <h6>Deadline</h6>
                   <h1 class="font-bold text-sm">21 March 2025</h1>
                 </div>
-                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]  complete-btn" >Completed</button>
             </div>
         </div>
 
 
         <!-- child div -->
-        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
-          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
-          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+        <div class="bg-[#F4F7FF] rounded-lg p-2 task-card">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">SwiftPay</h3>
+          <h1 class="text-xl  text-bold mb-2 ">Optimize  Home page </h1>
           <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
           <hr class="my-4 border-dashed">
             <div class="flex justify-center items-center gap-8  ">
@@ -108,15 +109,15 @@
                   <h6>Deadline</h6>
                   <h1 class="font-bold text-sm">21 March 2025</h1>
                 </div>
-                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]  complete-btn" >Completed</button>
             </div>
         </div>
 
 
         <!-- child div -->
-        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
-          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
-          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+        <div class="bg-[#F4F7FF] rounded-lg p-2 task-card">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">Meta</h3>
+          <h1 class="text-xl  text-bold mb-2 ">Add new emoji 🤲</h1>
           <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
           <hr class="my-4 border-dashed">
             <div class="flex justify-center items-center gap-8  ">
@@ -124,15 +125,15 @@
                   <h6>Deadline</h6>
                   <h1 class="font-bold text-sm">21 March 2025</h1>
                 </div>
-                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD] complete-btn">Completed</button>
             </div>
         </div>
 
 
         <!-- child div -->
-        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
-          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
-          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+        <div class="bg-[#F4F7FF] rounded-lg p-2 task-card">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">Google</h3>
+          <h1 class="text-xl  text-bold mb-2">Integrate OpenAI API</h1>
           <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
           <hr class="my-4 border-dashed">
             <div class="flex justify-center items-center gap-8  ">
@@ -140,15 +141,15 @@
                   <h6>Deadline</h6>
                   <h1 class="font-bold text-sm">21 March 2025</h1>
                 </div>
-                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD] complete-btn" >Completed</button>
             </div>
         </div>
 
 
         <!-- child div -->
-        <div class="bg-[#F4F7FF] rounded-lg p-2 ">
-          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">ShopEase</h3>
-          <h1 class="text-xl  text-bold mb-2">Fix Mobile Button Issue</h1>
+        <div class="bg-[#F4F7FF] rounded-lg p-2 task-card">
+          <h3 class="bg-white py-2 px-4 my-2 w-[110px] rounded-lg">Glassdoar</h3>
+          <h1 class="text-xl  text-bold mb-2 ">Improve Job searching </h1>
           <p class="bg-white p-2 mb-2 rounded-lg text-sm">Debug using Chrome DevTools, check for overlappin</p>
           <hr class="my-4 border-dashed">
             <div class="flex justify-center items-center gap-8  ">
@@ -156,22 +157,30 @@
                   <h6>Deadline</h6>
                   <h1 class="font-bold text-sm">21 March 2025</h1>
                 </div>
-                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]">Completed</button>
+                <button class="rounded-lg px-3 py-2 text-white text-sm bg-[#3752FD]  complete-btn">Completed</button>
             </div>
         </div>
 
     </div>
   </section>
 <!-- right section -->
-  <section class="w-2/12">
-      <div class="">
-        <div class="flex justify-center items-center">
-          <img src="./assets/activity.png" alt="">
-          <h1>Activity Log</h1>
-        </div>
-        <button class="bg-[#F4F7FF] py-2 px-64">Clear History</button>
-        <hr class="my-6 border-dashed">
+  <section class="w-1/4">
+    <div class="bg-[#F4F7FF] w-full h-full p-4 rounded-lg">
+      <div class="flex justify-center items-center gap-4 ">
+        <img src="./assets/activity.png" alt="">
+        <h1 class="text-xl font-bold">Activity Log</h1>
       </div>
+      <div class="flex justify-center">
+        <button class="bg-[#3752FD] py-2 px-6 mt-4 text-white rounded-lg" id="clear-history">Clear History</button>
+      </div>
+      <hr class="my-6 border-dashed">
+
+      <div class="p-2" id="notification">
+        
+      </div>
+    </div>
+       
+      
   </section>
 </main>
 <footer>
