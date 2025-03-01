@@ -1,15 +1,14 @@
 const completeButton = document.querySelectorAll(".complete-btn");
 
-for(let i=0; i<completeButton.length; i++) {
+for(let i = 0; i<completeButton.length; i++) {
   const button = completeButton[i];
   
-
   button.addEventListener("click", ()=>{
     alert("board update successfully");
     button.disabled = true;
     button.style.opacity = "0.3";
     
-    
+    // task value increase and decrease
     let taskAssignValue = document.getElementById("task-assign-value");
     let navBarValue = document.getElementById("nav-value");
   
@@ -22,28 +21,26 @@ for(let i=0; i<completeButton.length; i++) {
   
       taskAssignValue.textContent = newTaskAssignValue;
       navBarValue.textContent = newNavBarValue;
-    
     }
     
-    
+    // notification show in clear history body
     const notificationContainer = document.getElementById("notification");
     const notificationBase = "you have comolecated the task";
     const taskTitle = button.closest('.task-card').querySelector('h1').textContent;
-
 
     let allDisabled = Array.from(completeButton).every(btn => btn.disabled);
     if (allDisabled) {
       alert("Congrats!!! You have completed all the current task ");
     }
 
+    // current time show in clear history body
     const currentTime = new Date().toLocaleTimeString();
     let  getNotification = document.createElement("p");
     getNotification.style.cssText = "background-color: #fff; color: black; font-size: 14px; padding: 10px ; border-radius: 30px";
     
     getNotification.textContent = `${notificationBase} ${taskTitle} at ${currentTime}`;
     
-
-    notificationContainer.appendChild(getNotification)
+    notificationContainer.appendChild(getNotification);
 
     const clearHistory = document.getElementById("clear-history");
     clearHistory.addEventListener("click", ()=>{
@@ -54,11 +51,11 @@ for(let i=0; i<completeButton.length; i++) {
 
 }
 
-
-
+// current date, month and year show
 const todayName =document.getElementById("today");
 const dateMonYear = document.getElementById("date-mon-year")
 const daysName = ["sunday", "monday", "tuesday", "wednesday","thursday", "friday","saturday"];
+
 let currentDate = new Date();
 
 const thisDayName = daysName[currentDate.getDay()];
@@ -73,8 +70,7 @@ todayName.innerText= thisDayName;
 dateMonYear.innerText = DateFormate;
 
 
-
-// rgb color
+// rgb color generate and background theme color change
 
 window.onload = () =>{
   backgroundChange ();
@@ -97,10 +93,7 @@ function generateRgbColor () {
 }
 
 
-
-
-
-// discover something
+// discover something div and connect with the index2.html page
 const discoverSomething = document.getElementById("discover-something");
 
 discoverSomething.addEventListener("click",function(){
