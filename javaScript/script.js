@@ -95,3 +95,17 @@ function generateRgbColor () {
   return `rgb(${red},${green},${blue})`
 
 }
+
+
+
+
+
+// discover something
+const discoverSomething = document.getElementById("discover-something");
+
+discoverSomething.addEventListener("click",function(){
+  window.location.href ="index2.html"
+})
+
+
+
