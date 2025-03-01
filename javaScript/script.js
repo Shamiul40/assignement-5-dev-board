@@ -3,10 +3,11 @@ const completeButton = document.querySelectorAll(".complete-btn");
 for(let i=0; i<completeButton.length; i++) {
   const button = completeButton[i];
   
+
   button.addEventListener("click", ()=>{
     alert("board update successfully");
     button.disabled = true;
-    button.style.backgroundColor = "#9BA8F8";
+    button.style.opacity = "0.3";
     
     
     let taskAssignValue = document.getElementById("task-assign-value");
@@ -19,7 +20,7 @@ for(let i=0; i<completeButton.length; i++) {
       newTaskAssignValue--;
       newNavBarValue++;
   
-      taskAssignValue.textContent=newTaskAssignValue;
+      taskAssignValue.textContent = newTaskAssignValue;
       navBarValue.textContent = newNavBarValue;
     
     }
@@ -29,10 +30,10 @@ for(let i=0; i<completeButton.length; i++) {
     const notificationBase = "you have comolecated the task";
     const taskTitle = button.closest('.task-card').querySelector('h1').textContent;
 
-    if(i === completeButton.length-1) {
-      setTimeout(()=>{
-        alert("Congrats! you have completed all the current task");
-      }, 200)
+
+    let allDisabled = Array.from(completeButton).every(btn => btn.disabled);
+    if (allDisabled) {
+      alert("Congrats!!! You have completed all the current task ");
     }
 
     const currentTime = new Date().toLocaleTimeString();
@@ -55,7 +56,6 @@ for(let i=0; i<completeButton.length; i++) {
 
 
 
-
 const todayName =document.getElementById("today");
 const dateMonYear = document.getElementById("date-mon-year")
 const daysName = ["saturday", "sunday", "monday", "tuesday", "wednesday","thursday", "friday"];
@@ -72,3 +72,26 @@ let DateFormate =currentDate.toLocaleString("en-US",{
 todayName.innerText= thisDayName;
 dateMonYear.innerText = DateFormate;
 
+
+
+// rgb color
+
+window.onload = () =>{
+  backgroundChange ();
+}
+
+function backgroundChange () {
+ const bgTheme = document.getElementById("bg-theme");
+ 
+ bgTheme.addEventListener("click", function(){
+    document.body.style.backgroundColor = generateRgbColor();
+ })
+}
+
+function generateRgbColor () {
+  const red = Math.floor(Math.random()*255);
+  const green = Math.floor(Math.random()*255);
+  const blue = Math.floor(Math.random()*255);
+  return `rgb(${red},${green},${blue})`
+
+}
