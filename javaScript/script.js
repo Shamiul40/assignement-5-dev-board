@@ -58,7 +58,7 @@ for(let i=0; i<completeButton.length; i++) {
 
 const todayName =document.getElementById("today");
 const dateMonYear = document.getElementById("date-mon-year")
-const daysName = ["saturday", "sunday", "monday", "tuesday", "wednesday","thursday", "friday"];
+const daysName = ["sunday", "monday", "tuesday", "wednesday","thursday", "friday","saturday"];
 let currentDate = new Date();
 
 const thisDayName = daysName[currentDate.getDay()];
